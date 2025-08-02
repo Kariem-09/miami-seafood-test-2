@@ -10,12 +10,12 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-4">Miami</h3>
             <p className="text-lg mb-2">من قلب البحر لقلبك</p>
             <p className="opacity-90 mb-4">
-              مطعم المأكولات البحرية الفاخر في قلب المدينة
+              مطعم المأكولات البحرية الفاخر في قلب كفر مندا
             </p>
             <div className="space-y-2">
-              <p>📍 شارع البحر الأبيض المتوسط 15</p>
-              <p>📞 03-1234567</p>
-              <p>✉️ info@miami-restaurant.com</p>
+              <p></p>
+              <p>📞 054-606-6929</p>
+              <p>✉️ </p>
             </div>
           </div>
 
@@ -50,7 +50,7 @@ const Footer = () => {
 
         <div className="border-t border-white/20 pt-8 text-center">
           <p className="opacity-75">
-            © 2024 Miami Restaurant. جميع الحقوق محفوظة | כל הזכויות שמורות
+            © 2025 Miami Restaurant. جميع الحقوق محفوظة | כל הזכויות שמורות
           </p>
         </div>
       </div>
