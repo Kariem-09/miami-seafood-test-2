@@ -62,6 +62,28 @@ This project is built with:
 
 ## How can I deploy this project?
 
+### GitHub Pages Deployment
+
+This project is configured for automatic deployment to GitHub Pages. Here's how to set it up:
+
+1. **Enable GitHub Pages**:
+   - Go to your repository on GitHub
+   - Navigate to Settings > Pages
+   - Under "Source", select "GitHub Actions"
+   - The workflow will automatically deploy when you push to the main branch
+
+2. **Manual Deployment** (optional):
+   ```sh
+   npm install
+   npm run deploy
+   ```
+
+3. **Your site will be available at**:
+   `https://<your-username>.github.io/miami-seafood-test-2/`
+
+### Lovable Deployment
+
+Alternatively, you can deploy using Lovable:
 Simply open [Lovable](https://lovable.dev/projects/99053f58-3bd3-4d19-9075-2b8227267190) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
