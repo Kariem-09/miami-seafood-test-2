@@ -1,7 +1,13 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import CategoryModal from "@/components/CategoryModal";
 import seafoodPlatter from "@/assets/seafood-platter.jpg";
 import mezzeAppetizers from "@/assets/mezze-appetizers.jpg";
 import seafoodPasta from "@/assets/seafood-pasta.jpg";
+import categoryAppetizers from "@/assets/category-appetizers.jpg";
+import categoryMains from "@/assets/category-mains.jpg";
+import categoryDesserts from "@/assets/category-desserts.jpg";
+import categoryBeverages from "@/assets/category-beverages.jpg";
 
 interface MenuItem {
   id: string;
@@ -16,13 +22,16 @@ interface MenuCategory {
   title: string;
   titleHe: string;
   items: MenuItem[];
+  image: string;
 }
 
 const MenuSection = () => {
+  const [selectedCategory, setSelectedCategory] = useState<MenuCategory | null>(null);
   const menuCategories: MenuCategory[] = [
     {
       title: "المقبلات",
       titleHe: "מנות ראשונות",
+      image: categoryAppetizers,
       items: [
         {
           id: "1",
@@ -51,6 +60,7 @@ const MenuSection = () => {
     {
       title: "الأطباق الرئيسية",
       titleHe: "מנות עיקריות",
+      image: categoryMains,
       items: [
         {
           id: "4",
@@ -80,6 +90,7 @@ const MenuSection = () => {
     {
       title: "الحلويات",
       titleHe: "קינוחים",
+      image: categoryDesserts,
       items: [
         {
           id: "7",
@@ -100,6 +111,7 @@ const MenuSection = () => {
     {
       title: "المشروبات",
       titleHe: "משקאות",
+      image: categoryBeverages,
       items: [
         {
           id: "9",
@@ -131,54 +143,52 @@ const MenuSection = () => {
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {menuCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="space-y-8">
-              <div className="text-center">
-                <h3 className="text-3xl font-bold text-primary mb-2">
-                  {category.title}
-                </h3>
-                <p className="text-lg text-muted-foreground">
-                  {category.titleHe}
+            <Card 
+              key={categoryIndex} 
+              className="group cursor-pointer hover:shadow-elegant transition-all duration-300 bg-white/95 backdrop-blur-sm hover-scale"
+              onClick={() => setSelectedCategory(category)}
+            >
+              <div className="aspect-square overflow-hidden rounded-t-lg relative">
+                <img 
+                  src={category.image} 
+                  alt={category.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-hero opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <h3 className="text-2xl font-bold mb-2" dir="rtl">
+                      {category.title}
+                    </h3>
+                    <p className="text-lg opacity-90">
+                      {category.titleHe}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <CardContent className="p-6 text-center">
+                <p className="text-muted-foreground" dir="rtl">
+                  اضغط لاستكشاف القائمة
                 </p>
-              </div>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.items.map((item) => (
-                  <Card key={item.id} className="group hover:shadow-elegant transition-all duration-300 bg-white/95 backdrop-blur-sm">
-                    {item.image && (
-                      <div className="aspect-video overflow-hidden rounded-t-lg">
-                        <img 
-                          src={item.image} 
-                          alt={item.name}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                        />
-                      </div>
-                    )}
-                    <CardContent className="p-6">
-                      <div className="flex justify-between items-start mb-3">
-                        <div className="space-y-1">
-                          <h4 className="text-xl font-semibold text-primary" dir="rtl">
-                            {item.name}
-                          </h4>
-                          <p className="text-sm text-muted-foreground">
-                            {item.nameHe}
-                          </p>
-                        </div>
-                        <span className="text-xl font-bold text-accent">
-                          {item.price}
-                        </span>
-                      </div>
-                      <p className="text-muted-foreground" dir="rtl">
-                        {item.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
+                <p className="text-sm text-muted-foreground">
+                  לחץ לחקור התפריט
+                </p>
+              </CardContent>
+            </Card>
           ))}
         </div>
+
+        {selectedCategory && (
+          <CategoryModal
+            isOpen={!!selectedCategory}
+            onClose={() => setSelectedCategory(null)}
+            title={selectedCategory.title}
+            titleHe={selectedCategory.titleHe}
+            items={selectedCategory.items}
+          />
+        )}
       </div>
     </section>
   );
