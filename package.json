@@ -9,7 +9,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist --repo https://github.com/Kariem-09/miami-seafood-test-2.git"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
