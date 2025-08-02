@@ -33,9 +33,6 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h4 className="text-xl font-semibold mb-4">تواصل معنا</h4>
             <div className="space-y-4">
-              <Button variant="outline" className="w-full bg-white/10 border-white/30 text-white hover:bg-white hover:text-primary">
-                احجز طاولة
-              </Button>
               <div className="flex justify-center md:justify-start gap-4">
                 <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
                   <span className="text-sm">f</span>

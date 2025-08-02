@@ -36,9 +36,6 @@ const Hero = () => {
           <Button variant="hero" size="lg">
             استكشف القائمة
           </Button>
-          <Button variant="elegant" size="lg">
-            احجز الآن
-          </Button>
         </div>
       </div>
       

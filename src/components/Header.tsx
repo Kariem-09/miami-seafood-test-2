@@ -21,10 +21,6 @@ const Header = () => {
               تواصل معنا
             </a>
           </nav>
-
-          <Button variant="elegant" size="sm">
-            احجز طاولة
-          </Button>
         </div>
       </div>
     </header>
