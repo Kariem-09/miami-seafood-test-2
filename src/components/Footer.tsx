@@ -35,10 +35,10 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex justify-center md:justify-start gap-4">
                 <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
-                  <a className="text-sm" href="https://www.google.com">f</a>
+                  <a className="text-sm" href="https://www.facebook.com/profile.php?id=61572399257613">FB</a>
                 </div>
                 <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
-                  <span className="text-sm">i</span>
+                  <a className="text-sm" href="https://www.instagram.com/miami_seafood?igsh=cHd3eG55cTJ0YXp5">Insta</a>
                 </div>
                 <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
                   <span className="text-sm">w</span>
