@@ -14,11 +14,8 @@ const Header = () => {
             <a href="#menu" className="text-foreground hover:text-primary transition-colors">
               القائمة
             </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">
+            <a href="https://www.instagram.com/miami_seafood?igsh=cHd3eG55cTJ0YXp5" className="text-foreground hover:text-primary transition-colors">
               حولنا
-            </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
-              تواصل معنا
             </a>
           </nav>
         </div>
