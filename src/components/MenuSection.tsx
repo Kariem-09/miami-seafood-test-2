@@ -8,6 +8,7 @@ import categoryAppetizers from "@/assets/category-appetizers.jpg";
 import categoryMains from "@/assets/category-mains.jpg";
 import categoryDesserts from "@/assets/category-desserts.jpg";
 import categoryBeverages from "@/assets/category-beverages.jpg";
+import newMenuItem from "@/assets/IMG_2478.png";
 
 interface MenuItem {
   id: string;
@@ -84,6 +85,14 @@ const MenuSection = () => {
           nameHe: "לברק צלוי",
           description: "سمك طازج مشوي مع الأعشاب البحرية وزيت الزيتون",
           price: "125 ₪"
+        },
+        {
+          id: "7",
+          name: "وجبو",
+          nameHe: "לברק צלוי",
+          description: "سمك طازج مشوي مع الأعشاب البحرن",
+          price: "1 ₪",
+          image: newMenuItem
         }
       ]
     },
