@@ -7,7 +7,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-primary">Miami</h1>
-            <p className="text-sm text-muted-foreground">مطعم المأكولات البحرية</p>
+            <p className="text-sm text-muted-foreground">كفر مندا</p>
           </div>
           
           <nav className="hidden md:flex items-center gap-8">
