@@ -16,14 +16,14 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-        <img src={logoImage} />
+        <img src={logoImage} style={{"width: "100px", "height": "100px"}} />
         
         <div className="mb-8 space-y-4">
           <p className="text-2xl md:text-3xl font-light" dir="rtl">
             من قلب البحر لقلبك
           </p>
           <p className="text-xl md:text-2xl font-light" dir="rtl">
-            מהלב הים ללבך
+            מלב הים ללבך
           </p>
         </div>
         
