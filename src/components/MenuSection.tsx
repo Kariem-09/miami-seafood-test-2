@@ -91,7 +91,7 @@ const MenuSection = () => {
           name: "وجبة جديدة",
           nameHe: "מנה חדשה",
           description: "נסיון הוספת מנה",
-          description: "تجربة وصف اضافي"
+          description: "تجربة وصف اضافي",
           price: "1 ₪",
           image: newMenuItem
         }
