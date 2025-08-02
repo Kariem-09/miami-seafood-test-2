@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/restaurant-hero.jpg";
+import logoImage from "@/assets/logo_image.png";
 
 const Hero = () => {
   return (
@@ -15,9 +16,7 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-float">
-          Miami
-        </h1>
+        <img src=logoImage />
         
         <div className="mb-8 space-y-4">
           <p className="text-2xl md:text-3xl font-light" dir="rtl">
