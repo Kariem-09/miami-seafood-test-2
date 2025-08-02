@@ -18,6 +18,11 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'arabic': ['Noto Sans Arabic', 'sans-serif'],
+				'hebrew': ['Noto Sans Hebrew', 'sans-serif'],
+				'sans': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -26,7 +31,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -43,6 +49,10 @@ export default {
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
+				},
+				ocean: {
+					DEFAULT: 'hsl(var(--ocean))',
+					foreground: 'hsl(var(--ocean-foreground))'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -63,12 +73,33 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			backgroundImage: {
+				'gradient-sunset': 'var(--gradient-sunset)',
+				'gradient-ocean': 'var(--gradient-ocean)',
+				'gradient-hero': 'var(--gradient-hero)',
+			},
+			boxShadow: {
+				'warm': 'var(--shadow-warm)',
+				'elegant': 'var(--shadow-elegant)',
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'bounce': 'var(--transition-bounce)',
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				'shimmer': {
+					'0%': { backgroundPosition: '-200% 0' },
+					'100%': { backgroundPosition: '200% 0' },
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -87,6 +118,8 @@ export default {
 				}
 			},
 			animation: {
+				'float': 'float 6s ease-in-out infinite',
+				'shimmer': 'shimmer 2s linear infinite',
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			}
