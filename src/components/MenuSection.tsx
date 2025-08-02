@@ -88,9 +88,10 @@ const MenuSection = () => {
         },
         {
           id: "7",
-          name: "وجبو",
-          nameHe: "לברק צלוי",
-          description: "سمك طازج مشوي مع الأعشاب البحرن",
+          name: "وجبة جديدة",
+          nameHe: "מנה חדשה",
+          description: "נסיון הוספת מנה",
+          description: "تجربة وصف اضافي"
           price: "1 ₪",
           image: newMenuItem
         }
