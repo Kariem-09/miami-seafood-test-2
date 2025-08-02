@@ -8,7 +8,7 @@ import categoryAppetizers from "@/assets/category-appetizers.jpg";
 import categoryMains from "@/assets/category-mains.jpg";
 import categoryDesserts from "@/assets/category-desserts.jpg";
 import categoryBeverages from "@/assets/category-beverages.jpg";
-import newMenuItem from "@/assets/IMG_2478.png";
+import newMenuItem from "@/assets/IMG_5201.webp";
 
 interface MenuItem {
   id: string;
